@@ -1,0 +1,1470 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="DSP_AddedCamera" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1833.6,17434.4" sap2010:WorkflowViewState.IdRef="DSP_AddedCamera_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="23">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="24">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="DSP_AddedCamera" sap:VirtualizedContainerService.HintSize="1844,17269.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="AddedCameras" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <t:StartTest TestCase="{x:Null}" DisplayName="Start test" sap:VirtualizedContainerService.HintSize="1802.4,22.4" sap2010:WorkflowViewState.IdRef="StartTest_1" ScenarioName="Added camera" Status="STARTED" />
+    <ui:ReadRange AddHeaders="True" DataTable="[AddedCameras]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="1802.4,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="AddedCameras" WorkbookPath="Read.xlsx">
+      <ui:ReadRange.Range>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:ReadRange.Range>
+    </ui:ReadRange>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1802.4,16986.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[AddedCameras]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1765.6,16755.2" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+          <ui:ForEachRow.Body>
+            <ActivityAction x:TypeArguments="sd:DataRow">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1716,16606.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Default="[row(&quot;ClickCamera&quot;).ToString]" Name="variable1" />
+                  <Variable x:TypeArguments="x:Boolean" Name="p" />
+                  <Variable x:TypeArguments="x:String" Default="[row(&quot;SchedulingDate&quot;).ToString]" Name="variable3" />
+                  <Variable x:TypeArguments="x:Boolean" Name="yes" />
+                  <Variable x:TypeArguments="x:Boolean" Name="yes1" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1674.4,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                  <ui:CommentOut.Body>
+                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,200" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'outline item'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cbb0700e-7375-4c2c-b8c3-f464f685bb3c" InformativeScreenshot="ed0a7f92d1a72ba17085dd6d7872f0f8" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1007' /&gt;&lt;ctrl idx='2' name='{{variable1}}' role='outline item' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                    </Sequence>
+                  </ui:CommentOut.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:CommentOut>
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Double Click" sap:VirtualizedContainerService.HintSize="1674.4,107.2" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="454ef389-a94e-4c07-80dc-53717d294d52" InformativeScreenshot="e3405f1adc69e32fef05382a55bf504d" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1007' /&gt;&lt;ctrl idx='2' name='{{variable1}}' role='outline item' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1674.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Click on the &quot;+row(&quot;ClickCamera&quot;).ToString]" />
+                <ui:UiElementExists DisplayName="Element Exists 'Button'" Exists="[p]" sap:VirtualizedContainerService.HintSize="1674.4,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                  <ui:UiElementExists.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="597fcf0d-1ba0-4cf7-b05d-87e0aa71d69e" InformativeScreenshot="75e1c999f39de1fd3646f9c3b2005954" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='#32770' title='Error - Loss of Power' /&gt;&lt;wnd ctrlid='1' title='OK' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:UiElementExists.Target>
+                </ui:UiElementExists>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1674.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Alert present &quot;]" />
+                <If Condition="[p=True]" sap:VirtualizedContainerService.HintSize="1674.4,482.4" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1f796b2c-dfba-4e66-a6ef-d87c28ef31c8" InformativeScreenshot="8ca775fb93723588c476d179f844443e" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='#32770' title='Error - Loss of Power' /&gt;&lt;wnd ctrlid='1' title='OK' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Click on the OK button&quot;]" />
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Alert not present&quot;]" />
+                  </If.Else>
+                </If>
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'page tab  Configure'" sap:VirtualizedContainerService.HintSize="1674.4,107.2" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e8fcc593-266a-4500-bf8a-a0c0bc623977" InformativeScreenshot="8908708cc89b6113409abd3870b799ac" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1009' /&gt;&lt;ctrl name='Configure' role='page tab' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1674.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Configure&quot;]" />
+                <If Condition="[row(&quot;CameraInfo&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="1674.4,1126.4" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="400,976.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'Edit'" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[row(&quot;CameraName&quot;).ToString]">
+                        <ui:TypeInto.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9170f514-2b8b-4802-b390-dccfcab51973" InformativeScreenshot="2d79d7b47039858de048c088786fa043" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1219' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:TypeInto.Target>
+                      </ui:TypeInto>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Enter the Camera name &quot;+row(&quot;CameraName&quot;).ToString]" />
+                      <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'combo box'" sap:VirtualizedContainerService.HintSize="358.4,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="[row(&quot;CameraGroup&quot;).ToString]">
+                        <ui:SelectItem.Items>
+                          <scg:List x:TypeArguments="x:String" Capacity="4">
+                            <x:String>Camera Group 01</x:String>
+                          </scg:List>
+                        </ui:SelectItem.Items>
+                        <ui:SelectItem.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c13c1c3a-a84a-43ff-a4bc-b6f93a1dad90" InformativeScreenshot="43a4bc3dca9c0464d756c94998846bee" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='265' /&gt;&lt;ctrl role='combo box' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:SelectItem.Target>
+                      </ui:SelectItem>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Select the camera group as &quot;+row(&quot;CameraGroup&quot;).ToString]" />
+                      <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'ComboBox'" EmptyField="True" sap:VirtualizedContainerService.HintSize="358.4,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[row(&quot;Description&quot;).ToString]">
+                        <ui:TypeInto.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d0cee0c4-bfe2-4df0-a111-331788ededae" InformativeScreenshot="24417ba30da7c43c61dec7f54900d33b" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1220' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:TypeInto.Target>
+                      </ui:TypeInto>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Enter description as &quot;+row(&quot;Description&quot;).ToString]" />
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;user don't want to configure camera info.&quot;]" />
+                  </If.Else>
+                </If>
+                <If Condition="[row(&quot;CameraUsedCase&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="1674.4,912" sap2010:WorkflowViewState.IdRef="If_4">
+                  <If.Then>
+                    <If Condition="[row(&quot;SendAlert&quot;).ToString.Equals(&quot;Hot-List&quot;)]" sap:VirtualizedContainerService.HintSize="794.4,762.4" sap2010:WorkflowViewState.IdRef="If_3">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f8009208-17e0-483f-b476-c8c881bf31b2" InformativeScreenshot="c5d1ab533c4cd06c484acb79049c5631" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1169' title='Hot-List' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Click on the Hot-List radio button&quot;]" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="375.2,612.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Default="[row(&quot;ActionRadioButton&quot;).ToString]" Name="variable2" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f8c4b3a6-288a-43a1-ba02-2da952345df2" InformativeScreenshot="e0018276cb997d8ca17d906600ee9109" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='279' title='Authorized-Unauthorized' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;Click on the Authorized-Unauthorized&quot;]" />
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8e5c8d92-8376-493c-ad9b-258ee13e50c1" InformativeScreenshot="d5541504ef2bf7022f979e19497dd1d0" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd omit:ctrlid='1085' title='{{variable2}}' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Click on the &quot;+row(&quot;ActionRadioButton&quot;).ToString]" />
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </If.Then>
+                  <If.Else>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;User don't want to action on camera used case&quot;]" />
+                  </If.Else>
+                </If>
+                <If Condition="[row(&quot;Scheduling&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="1674.4,762.4" sap2010:WorkflowViewState.IdRef="If_5">
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="375.2,612.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Check_1">
+                        <ui:Check.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a5d8c941-4177-47cb-b55f-8f14ccd10a30" InformativeScreenshot="7e452debe4eb7c7e46eeae0f1352ac55" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='239' title='Schedule' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:Check.Target>
+                      </ui:Check>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;checked the scheduling&quot;]" />
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3f26f798-26ae-45d7-9bfe-79c1b4cf4691" InformativeScreenshot="455921cb0c99116f47851984ea0dd52d" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd omit:ctrlid='220' title='{{variable3}}' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info" Message="[&quot;Checked on the &quot;+row(&quot;SchedulingDate&quot;).ToString]" />
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence sap:VirtualizedContainerService.HintSize="375.2,185.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Info" Message="[&quot;User don't want to schedule&quot;]" />
+                    </Sequence>
+                  </If.Else>
+                </If>
+                <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'combo box'" sap:VirtualizedContainerService.HintSize="1674.4,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="[row(&quot;AccessDetection&quot;).ToString]">
+                  <ui:SelectItem.Items>
+                    <scg:List x:TypeArguments="x:String" Capacity="8">
+                      <x:String>None</x:String>
+                      <x:String>Entrance</x:String>
+                      <x:String>Exit</x:String>
+                      <x:String>North</x:String>
+                      <x:String>South</x:String>
+                      <x:String>East</x:String>
+                      <x:String>West</x:String>
+                    </scg:List>
+                  </ui:SelectItem.Items>
+                  <ui:SelectItem.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d1a9808b-b2f5-4d2d-81ca-2fa29afd6eec" InformativeScreenshot="33635b7801cf684f14a85d336559a8a6" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='11069' /&gt;&lt;ctrl name='                            ' role='combo box' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:SelectItem.Target>
+                </ui:SelectItem>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1674.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_17" Level="Info" Message="[&quot;Select the access detection &quot;+row(&quot;AccessDetection&quot;).ToString]" />
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="1213.6,107.2" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="afe9ea72-bf6f-4969-983f-170767575ad6" InformativeScreenshot="9c88f3bbc40ba63e368ff17f9ae26b1c" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='297' title='Apply' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1213.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Info" Message="[&quot;Click on the Apply button&quot;]" />
+                <If Condition="[row(&quot;CameraSetting&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="1674.4,1312.8" sap2010:WorkflowViewState.IdRef="If_6">
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="836,1163.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'Edit'" EmptyField="True" sap:VirtualizedContainerService.HintSize="794.4,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[row(&quot;Status&quot;).ToString]">
+                        <ui:TypeInto.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="42db315a-d81d-49ea-b01b-d51d7af6a0e4" InformativeScreenshot="37978a3aeee61c28a813a1bc839f1860" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1049' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:TypeInto.Target>
+                      </ui:TypeInto>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="794.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Info" Message="[&quot;Enter the Status as &quot;+row(&quot;Status&quot;).ToString]" />
+                      <If Condition="[row(&quot;CameraGate&quot;).ToString.Equals(&quot;Inside&quot;)]" sap:VirtualizedContainerService.HintSize="794.4,482.4" sap2010:WorkflowViewState.IdRef="If_7">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="630233d4-7209-417e-b419-431df9516eab" InformativeScreenshot="62dd8fe3d647d45cc317b11bf073379b" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='11120' title='Camera Inside gate' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="Info" Message="[&quot;Click on the Camera inside gate&quot;]" />
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3365ea01-93ce-4549-9950-818ea9acaef2" InformativeScreenshot="d5f0c26e76c1a28550e398006cf85bc4" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='11121' title='Camera Outside gate' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Info" Message="[&quot;Click on the camera outside gate&quot;]" />
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="794.4,107.2" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="896f183d-7711-47b5-af43-a9465222ec6d" InformativeScreenshot="fbe026a0a9f0555bfa61d090f078a773" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1231' title='Apply' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="794.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Info" Message="[&quot;Click on the Apply button&quot;]" />
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_20" Level="Info" Message="[&quot;User don't want to used camera setting&quot;]" />
+                  </If.Else>
+                </If>
+                <If Condition="[row(&quot;ConfigureRelayOutput&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="1674.4,3671.2" sap2010:WorkflowViewState.IdRef="If_8">
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="860.8,3521.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:Boolean" Name="yes" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If Condition="[row(&quot;DetectionAlert&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="819.2,657.6" sap2010:WorkflowViewState.IdRef="If_9">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="400,508" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="358.4,107.2" sap2010:WorkflowViewState.IdRef="Check_2">
+                              <ui:Check.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eea04d8a-6625-436d-8d15-9e252f48b08c" InformativeScreenshot="5191018071eec1834a9e52ae655308ac" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='227' title='Detection Alert' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Check.Target>
+                            </ui:Check>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_26" Level="Info" Message="[&quot;Check the detection alert&quot;]" />
+                            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'combo box'" sap:VirtualizedContainerService.HintSize="358.4,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_3" Item="[row(&quot;DetectionSelect&quot;).ToString]">
+                              <ui:SelectItem.Items>
+                                <scg:List x:TypeArguments="x:String" Capacity="4">
+                                  <x:String>Network Relay</x:String>
+                                  <x:String>None</x:String>
+                                </scg:List>
+                              </ui:SelectItem.Items>
+                              <ui:SelectItem.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="79235aa6-3741-4cc8-91a2-ce53ee0a3cb3" InformativeScreenshot="fcc4674120c8f8f2e1ff5bbc5e2fc7cc" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1212' /&gt;&lt;ctrl role='combo box' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:SelectItem.Target>
+                            </ui:SelectItem>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Uncheck" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Check_6">
+                              <ui:Check.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eea04d8a-6625-436d-8d15-9e252f48b08c" InformativeScreenshot="5191018071eec1834a9e52ae655308ac" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='227' title='Detection Alert' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Check.Target>
+                            </ui:Check>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_27" Level="Info" Message="[&quot;uncheck the detection alert&quot;]" />
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                      <If Condition="[row(&quot;HotAlert&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="819.2,790.4" sap2010:WorkflowViewState.IdRef="If_10">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="400,640.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="358.4,107.2" sap2010:WorkflowViewState.IdRef="Check_3">
+                              <ui:Check.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8acda4fc-d76c-456a-adec-5ba9ffddc36c" InformativeScreenshot="adc0d8c4e9f8f410fbaacc3a8c8833f2" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='228' title='Hot Alert' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Check.Target>
+                            </ui:Check>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="Info" Message="[&quot;Check the Hot Alert&quot;]" />
+                            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'combo box'" sap:VirtualizedContainerService.HintSize="358.4,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_4" Item="[row(&quot;HotSelect&quot;).ToString]">
+                              <ui:SelectItem.Items>
+                                <scg:List x:TypeArguments="x:String" Capacity="4">
+                                  <x:String>Network Relay</x:String>
+                                  <x:String>None</x:String>
+                                </scg:List>
+                              </ui:SelectItem.Items>
+                              <ui:SelectItem.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="79235aa6-3741-4cc8-91a2-ce53ee0a3cb3" InformativeScreenshot="2513a93b8801f10608ddfcd6c7b261c3" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1215' /&gt;&lt;ctrl role='combo box' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:SelectItem.Target>
+                            </ui:SelectItem>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_34" Level="Info" Message="[&quot;Select as &quot;+row(&quot;HotSelect&quot;).ToString]" />
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Uncheck" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Check_7">
+                              <ui:Check.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8acda4fc-d76c-456a-adec-5ba9ffddc36c" InformativeScreenshot="adc0d8c4e9f8f410fbaacc3a8c8833f2" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='228' title='Hot Alert' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Check.Target>
+                            </ui:Check>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_29" Level="Info" Message="[&quot;Uncheck the Hot alert&quot;]" />
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                      <If Condition="[row(&quot;AuthorizeAlert&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="819.2,790.4" sap2010:WorkflowViewState.IdRef="If_11">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="400,640.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="358.4,107.2" sap2010:WorkflowViewState.IdRef="Check_4">
+                              <ui:Check.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eea04d8a-6625-436d-8d15-9e252f48b08c" InformativeScreenshot="77bdb10882acf61d01556b78552eb9f5" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='231' title='Authorized Alert' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Check.Target>
+                            </ui:Check>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="Info" Message="[&quot;Check for the Authorized alert&quot;]" />
+                            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'combo box'" sap:VirtualizedContainerService.HintSize="358.4,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_5" Item="[row(&quot;AuthorizeSelect&quot;).ToString]">
+                              <ui:SelectItem.Items>
+                                <scg:List x:TypeArguments="x:String" Capacity="4">
+                                  <x:String>Network Relay</x:String>
+                                  <x:String>None</x:String>
+                                </scg:List>
+                              </ui:SelectItem.Items>
+                              <ui:SelectItem.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="79235aa6-3741-4cc8-91a2-ce53ee0a3cb3" InformativeScreenshot="2eea40dca75f3acafecc1471d8cb1736" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1214' /&gt;&lt;ctrl role='combo box' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:SelectItem.Target>
+                            </ui:SelectItem>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_35" Level="Info" Message="[&quot;Select as &quot;+row(&quot;AuthorizeSelect&quot;).ToString]" />
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Uncheck" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Check_8">
+                              <ui:Check.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eea04d8a-6625-436d-8d15-9e252f48b08c" InformativeScreenshot="77bdb10882acf61d01556b78552eb9f5" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='231' title='Authorized Alert' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Check.Target>
+                            </ui:Check>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_31" Level="Info" Message="[&quot;Check for the Unauthorized alert&quot;]" />
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                      <If Condition="[row(&quot;AuthorizedMissingPlate&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="819.2,790.4" sap2010:WorkflowViewState.IdRef="If_12">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="400,640.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="358.4,107.2" sap2010:WorkflowViewState.IdRef="Check_5">
+                              <ui:Check.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eea04d8a-6625-436d-8d15-9e252f48b08c" InformativeScreenshot="b1eb47bed59c31875aa444ce8534ccf6" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='229' title='Unauthorized/Missing Plate Alert' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Check.Target>
+                            </ui:Check>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_32" Level="Info" Message="[&quot;Check for Unauthorized missing plate&quot;]" />
+                            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'combo box'" sap:VirtualizedContainerService.HintSize="358.4,135.2" sap2010:WorkflowViewState.IdRef="SelectItem_6" Item="[row(&quot;AuthorizedMissingPlateSelect&quot;).ToString]">
+                              <ui:SelectItem.Items>
+                                <scg:List x:TypeArguments="x:String" Capacity="4">
+                                  <x:String>Network Relay</x:String>
+                                  <x:String>None</x:String>
+                                </scg:List>
+                              </ui:SelectItem.Items>
+                              <ui:SelectItem.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="79235aa6-3741-4cc8-91a2-ce53ee0a3cb3" InformativeScreenshot="8a91a2a29ea66b66826edcc6b181e65b" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1213' /&gt;&lt;ctrl role='combo box' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:SelectItem.Target>
+                            </ui:SelectItem>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_36" Level="Info" Message="[&quot;Select as &quot;+row(&quot;AuthorizedMissingPlateSelect&quot;).ToString]" />
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Uncheck" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Check_9">
+                              <ui:Check.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eea04d8a-6625-436d-8d15-9e252f48b08c" InformativeScreenshot="b1eb47bed59c31875aa444ce8534ccf6" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='229' title='Unauthorized/Missing Plate Alert' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Check.Target>
+                            </ui:Check>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_33" Level="Info" Message="[&quot;UnCheck for Unauthorized missing plate&quot;]" />
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="819.2,107.2" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="88f1647a-e21c-479e-916a-9926511e3c48" InformativeScreenshot="71a1a46846048eddc7fcf2ba91baa807" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1211' title='Apply' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="819.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_43" Level="Info" Message="[&quot;Click on the apply button&quot;]" />
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Info" Message="[&quot;User don't to work on configure relay output&quot;]" />
+                  </If.Else>
+                </If>
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="1674.4,107.2" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0f3f4673-4207-4414-9342-15972b54194e" InformativeScreenshot="ba2e27f247f5be4ea56e7cf8e0c964a3" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1210' title='Configure' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1674.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_37" Level="Info" Message="[&quot;Click on the Configure button and verify&quot;]" />
+                <ui:UiElementExists DisplayName="Element Exists 'Button'" Exists="[yes]" sap:VirtualizedContainerService.HintSize="1674.4,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                  <ui:UiElementExists.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="168d56fe-a879-4b02-b4fd-862ab8211d35" InformativeScreenshot="3c12bb6affd47671bad9fdd62486ab28" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='#32770' title='Relay Config' /&gt;&lt;wnd ctrlid='1199' title='&amp;amp;Add' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:UiElementExists.Target>
+                </ui:UiElementExists>
+                <uta:VerifyExpressionWithOperator ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="1674.4,62.4" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_1" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False">
+                  <uta:VerifyExpressionWithOperator.FirstExpression>
+                    <InArgument x:TypeArguments="x:Boolean">[yes]</InArgument>
+                  </uta:VerifyExpressionWithOperator.FirstExpression>
+                  <uta:VerifyExpressionWithOperator.SecondExpression>
+                    <InArgument x:TypeArguments="x:Boolean">[True]</InArgument>
+                  </uta:VerifyExpressionWithOperator.SecondExpression>
+                </uta:VerifyExpressionWithOperator>
+                <If Condition="[yes=True]" sap:VirtualizedContainerService.HintSize="1674.4,525.6" sap2010:WorkflowViewState.IdRef="If_13">
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="80d4032f-53cf-4d90-be00-765c40386bb4" InformativeScreenshot="32ecfa4a72b57bbb2a95ebe7c76c5e7b" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='#32770' title='Relay Config' /&gt;&lt;wnd ctrlid='11100' title='&amp;amp;Close' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_38" Level="Info" Message="[&quot;Configuration button pass&gt;&gt;&quot;]" />
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence sap:VirtualizedContainerService.HintSize="375.2,376" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_39" Level="Info" Message="[&quot;Configuration button failed&gt;&gt;&quot;]" />
+                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="TakeScreenShot.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="argument1">Configure button</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                      <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="EndTest_3" Status="FAILED" />
+                    </Sequence>
+                  </If.Else>
+                </If>
+                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="1674.4,107.2" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e8bba197-3053-4f59-ae00-fb13cf82043b" InformativeScreenshot="8f177a63b0764312d383e71ef2bd87e9" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='11491' title='Network Relay' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:Click.Target>
+                </ui:Click>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1674.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_40" Level="Info" Message="[&quot;Click on the network relay&quot;]" />
+                <ui:UiElementExists DisplayName="Element Exists 'Static'" Exists="[yes1]" sap:VirtualizedContainerService.HintSize="1674.4,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                  <ui:UiElementExists.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5b24c9ba-57a4-4212-a83d-21d8846f6e58" InformativeScreenshot="1e7e440273d426a2fddfbbc017643248" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='#32770' title='Network Relay' /&gt;&lt;wnd ctrlid='11489' title='IP Address' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:UiElementExists.Target>
+                </ui:UiElementExists>
+                <uta:VerifyExpressionWithOperator ContinueOnFailure="True" DisplayName="Verify Expression with Operator" sap:VirtualizedContainerService.HintSize="1674.4,62.4" sap2010:WorkflowViewState.IdRef="VerifyExpressionWithOperator_2" Operator="Equality" TakeScreenshotInCaseOfFailingAssertion="False">
+                  <uta:VerifyExpressionWithOperator.FirstExpression>
+                    <InArgument x:TypeArguments="x:Boolean">[yes1]</InArgument>
+                  </uta:VerifyExpressionWithOperator.FirstExpression>
+                  <uta:VerifyExpressionWithOperator.SecondExpression>
+                    <InArgument x:TypeArguments="x:Boolean">[True]</InArgument>
+                  </uta:VerifyExpressionWithOperator.SecondExpression>
+                </uta:VerifyExpressionWithOperator>
+                <If Condition="[yes1=True]" sap:VirtualizedContainerService.HintSize="1674.4,525.6" sap2010:WorkflowViewState.IdRef="If_14">
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="76d1a138-7978-455b-a852-19f74177351d" InformativeScreenshot="ba65f26bafee1df35e1c9370014c235e" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='#32770' title='Network Relay' /&gt;&lt;wnd ctrlid='2' title='Close' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_41" Level="Info" Message="[&quot;Click on the Close button&gt;&gt;&gt;test case pass&quot;]" />
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence sap:VirtualizedContainerService.HintSize="375.2,376" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_42" Level="Warn" Message="[&quot;Network relay button not working:TestCase failed&quot;]" />
+                      <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="EndTest_4" Status="FAILED" />
+                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="TakeScreenShot.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="argument1">Network relay</InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                    </Sequence>
+                  </If.Else>
+                </If>
+                <If Condition="[row(&quot;ExpertSetting&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="1674.4,4232.8" sap2010:WorkflowViewState.IdRef="If_16">
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="1296.8,4083.2" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If Condition="[row(&quot;AveragePixelCalculator&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="1255.2,482.4" sap2010:WorkflowViewState.IdRef="If_15">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Check_10">
+                              <ui:Check.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eda28709-85b1-4071-9619-f03ae2c0341e" InformativeScreenshot="211bb10bde8225aab00479f5bdfa94dd" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='238' title='Activate Health Indicator &amp;apos;Average Pixel Calculator&amp;apos;' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Check.Target>
+                            </ui:Check>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_44" Level="Info" Message="[&quot;Check for the activate heath indicator ,average pixel calculator,&quot;]" />
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Uncheck" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Check_11">
+                              <ui:Check.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eda28709-85b1-4071-9619-f03ae2c0341e" InformativeScreenshot="211bb10bde8225aab00479f5bdfa94dd" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='238' title='Activate Health Indicator &amp;apos;Average Pixel Calculator&amp;apos;' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Check.Target>
+                            </ui:Check>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_45" Level="Info" Message="[&quot;Un check for the activate heath indicator ,average pixel calculator,&quot;]" />
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                      <If Condition="[row(&quot;MissingPlate&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="1255.2,482.4" sap2010:WorkflowViewState.IdRef="If_17">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Check_12">
+                              <ui:Check.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a2927be8-7bff-4e58-8d74-bf8a31bcbe27" InformativeScreenshot="b2758f4a0782677b4af331113f7e4d9d" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1072' title='Activate Health Indicator &amp;apos;Missing Plate&amp;apos;' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Check.Target>
+                            </ui:Check>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_47" Level="Info" Message="[&quot;Check for the activate heath indicator for missing plate&quot;]" />
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Uncheck" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Check_13">
+                              <ui:Check.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eb1ae7d9-3a4d-475a-89a1-ac43819d1a13" InformativeScreenshot="ec455212d2496b84683516bb2a8a18fc" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1072' title='Activate Health Indicator &amp;apos;Missing Plate&amp;apos;' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Check.Target>
+                            </ui:Check>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_48" Level="Info" Message="[&quot;Uncheck for the activate heath indicator for missing plate&quot;]" />
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                      <If Condition="[row(&quot;AddMissingPlateToDetection&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="1255.2,1004.8" sap2010:WorkflowViewState.IdRef="If_19">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="836,855.2" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="794.4,107.2" sap2010:WorkflowViewState.IdRef="Check_14">
+                              <ui:Check.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="41e95dda-0382-42b3-8558-fece71561211" InformativeScreenshot="8ab50431a2689bca8df85d730f5f0cd0" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1073' title='Add Missing Plates to Detection List' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Check.Target>
+                            </ui:Check>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="794.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_49" Level="Info" Message="[&quot;Check for add missing plate for detection list&quot;]" />
+                            <If Condition="[row(&quot;AlarmOnMissingPlateDetection&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="794.4,482.4" sap2010:WorkflowViewState.IdRef="If_18">
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Check_15">
+                                    <ui:Check.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8d63ca38-dce0-4c26-93a0-d3a38e9b48da" InformativeScreenshot="fe82ce05d88985f607412c0eac951e25" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='11286' title='Alarm on Missing Plate Detection' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:Check.Target>
+                                  </ui:Check>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_50" Level="Info" Message="[&quot;Check for the alarm on missing plate detection&quot;]" />
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Uncheck" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Check_16">
+                                    <ui:Check.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c375b721-157b-4882-a334-9951e0ce93ff" InformativeScreenshot="4e4b902f5fe1c7db158754b9564f9a45" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='11286' title='Alarm on Missing Plate Detection' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:Check.Target>
+                                  </ui:Check>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_51" Level="Info" Message="[&quot;Check for the alarm on missing plate detection&quot;]" />
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Uncheck" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Check_17">
+                              <ui:Check.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="57a8ffce-4ad4-4a07-936a-b88985cc5e2b" InformativeScreenshot="8ab50431a2689bca8df85d730f5f0cd0" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1073' title='Add Missing Plates to Detection List' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Check.Target>
+                            </ui:Check>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_52" Level="Info" Message="[&quot;Uncheck for add missing plate for detection list&quot;]" />
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                      <If Condition="[row(&quot;MaxPixel&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="1255.2,790.4" sap2010:WorkflowViewState.IdRef="If_20">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,640.8" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Check_18">
+                              <ui:Check.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="88990f22-fc30-47fe-b25c-794f7fb5ff4a" InformativeScreenshot="4223b974629bad0462d89b37b2fb9858" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1074' title='Maximum Pixel Height' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Check.Target>
+                            </ui:Check>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_53" Level="Info" Message="[&quot;Check for the maximum pixel height&quot;]" />
+                            <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'Button'" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_4" Text="[row(&quot;MaxPixelNumber&quot;).ToString]">
+                              <ui:TypeInto.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3c1e7acf-fe59-4276-b01c-b800c779307c" InformativeScreenshot="eb6f236e652ea15c385fb3ab818bca2d" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='259' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:TypeInto.Target>
+                            </ui:TypeInto>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_54" Level="Info" Message="[&quot;Enter Max pixel number as &quot;+row(&quot;MaxPixelNumber&quot;).ToString]" />
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Uncheck" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Check_19">
+                              <ui:Check.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3f7f642f-e7f0-4e39-b7d7-5d998fe14a2e" InformativeScreenshot="4223b974629bad0462d89b37b2fb9858" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1074' title='Maximum Pixel Height' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Check.Target>
+                            </ui:Check>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_55" Level="Info" Message="[&quot;Uncheck for the maximum pixel height&quot;]" />
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                      <If Condition="[row(&quot;MinimumPixel&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="1255.2,790.4" sap2010:WorkflowViewState.IdRef="If_21">
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,640.8" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Check_20">
+                              <ui:Check.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eec12d0f-440f-4b04-8613-bd1d38759a44" InformativeScreenshot="15fa72b7c4cf241c2061a6def09edf3a" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1077' title='Minimum Pixel Height' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Check.Target>
+                            </ui:Check>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_56" Level="Info" Message="[&quot;Check for the Minimum Pixel height&quot;]" />
+                            <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'Edit'" EmptyField="True" sap:VirtualizedContainerService.HintSize="333.6,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_5" Text="[row(&quot;MinPixelNumber&quot;).ToString]">
+                              <ui:TypeInto.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0f111f9d-debc-4444-966c-58136fd49245" InformativeScreenshot="33f292f7bf0b7ac0c79a923b2f39e52b" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='260' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:TypeInto.Target>
+                            </ui:TypeInto>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_58" Level="Info" Message="[&quot;Enter as &quot;+row(&quot;MinPixelNumber&quot;).ToString]" />
+                          </Sequence>
+                        </If.Then>
+                        <If.Else>
+                          <Sequence sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Uncheck" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="333.6,107.2" sap2010:WorkflowViewState.IdRef="Check_21">
+                              <ui:Check.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9d08c609-719a-4636-bbb5-e848c7add10a" InformativeScreenshot="6780be7fc1ea202df1a554003a4555f7" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1077' title='Minimum Pixel Height' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Check.Target>
+                            </ui:Check>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_57" Level="Info" Message="[&quot;Uncheck for the Minimum Pixel height&quot;]" />
+                          </Sequence>
+                        </If.Else>
+                      </If>
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="1255.2,107.2" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f48e7e76-2d77-4d32-81aa-d13670322fdf" InformativeScreenshot="0a9bb31064c35f6297c31a5a313e2646" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='295' title='Apply' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1255.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_59" Level="Info" Message="[&quot;Click on the Apply button&quot;]" />
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_46" Level="Info" Message="[&quot;User don,t want to do expert setting&quot;]" />
+                  </If.Else>
+                </If>
+                <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="1674.4,22.4" sap2010:WorkflowViewState.IdRef="EndTest_1" Status="PASSED" />
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEachRow.Body>
+        </ui:ForEachRow>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1768.8,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="375.2,376" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info" Message="[exception.Message]" />
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="TakeScreenShot.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="x:String" x:Key="argument1">
+                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="exception.Message" />
+                  </InArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+              <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="EndTest_2" Status="FAILED" />
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>
