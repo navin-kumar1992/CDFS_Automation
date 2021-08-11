@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Search" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1480.8,7830.4" sap2010:WorkflowViewState.IdRef="Search_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Search" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1480.8,8077.6" sap2010:WorkflowViewState.IdRef="Search_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
       <x:String>System.Activities</x:String>
@@ -50,9 +50,11 @@
       <AssemblyReference>UiPath.CV</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Search" sap:VirtualizedContainerService.HintSize="1491.2,7665.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Search" sap:VirtualizedContainerService.HintSize="1491.2,7912.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="Search" />
     </Sequence.Variables>
@@ -61,7 +63,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <t:StartTest TestCase="{x:Null}" DisplayName="Start test" sap:VirtualizedContainerService.HintSize="1449.6,22.4" sap2010:WorkflowViewState.IdRef="StartTest_1" ScenarioName="Search" Status="STARTED" />
+    <t:StartTest TestCase="{x:Null}" DisplayName="Start test" sap:VirtualizedContainerService.HintSize="1449.6,134.4" sap2010:WorkflowViewState.IdRef="StartTest_1" ScenarioName="Search" Status="STARTED" />
     <ui:ReadRange AddHeaders="True" DataTable="[Search]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="1449.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Search" WorkbookPath="Read.xlsx">
       <ui:ReadRange.Range>
         <InArgument x:TypeArguments="x:String">
@@ -69,21 +71,21 @@
         </InArgument>
       </ui:ReadRange.Range>
     </ui:ReadRange>
-    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Search]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1449.6,7382.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[Search]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1449.6,7517.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1400,7233.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1400,7368.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1358.4,7140.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1358.4,7276" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <TryCatch.Try>
-                <Sequence sap:VirtualizedContainerService.HintSize="1321.6,6909.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence sap:VirtualizedContainerService.HintSize="1321.6,7044.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:Boolean" Name="present" />
                   </Sequence.Variables>
@@ -104,7 +106,7 @@
                       </ui:CursorPosition>
                     </ui:Click.CursorPosition>
                     <ui:Click.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b656dd5c-5d95-4a72-8bb6-515bb2a218e2" InformativeScreenshot="92441d199153ad6290ea6299897d4285" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='199' title='Search Detections/Hits' /&gt;">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b656dd5c-5d95-4a72-8bb6-515bb2a218e2" InformativeScreenshot="b415ecb8720d7dfa08770471ae59cf09" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       Uat_Demo_User2' /&gt;&lt;wnd ctrlid='199' title='Search Detections/Hits' /&gt;">
                         <ui:Target.TimeoutMS>
                           <InArgument x:TypeArguments="x:Int32" />
                         </ui:Target.TimeoutMS>
@@ -136,7 +138,7 @@
                     </uta:VerifyExpressionWithOperator.SecondExpression>
                   </uta:VerifyExpressionWithOperator>
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1280,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Veryfy the Search module&quot;]" />
-                  <If Condition="[present=True]" sap:VirtualizedContainerService.HintSize="1280,643.2" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[present=True]" sap:VirtualizedContainerService.HintSize="1280,652.8" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
                       <Sequence sap:VirtualizedContainerService.HintSize="375.2,493.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
                         <sap:WorkflowViewStateService.ViewState>
@@ -161,7 +163,7 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="375.2,376" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <Sequence sap:VirtualizedContainerService.HintSize="375.2,434.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -173,11 +175,11 @@
                             <InArgument x:TypeArguments="x:String" x:Key="argument1">Search verification</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
-                        <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="EndTest_1" Status="FAILED" />
+                        <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="333.6,80.8" sap2010:WorkflowViewState.IdRef="EndTest_1" Status="FAILED" />
                       </Sequence>
                     </If.Else>
                   </If>
-                  <If Condition="[row(&quot;DateRange&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="1280,1098.4" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If Condition="[row(&quot;DateRange&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="1280,1108" sap2010:WorkflowViewState.IdRef="If_2">
                     <If.Then>
                       <Sequence sap:VirtualizedContainerService.HintSize="375.2,948.8" sap2010:WorkflowViewState.IdRef="Sequence_7">
                         <sap:WorkflowViewStateService.ViewState>
@@ -249,7 +251,7 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <If Condition="[row(&quot;RecordToShow&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="1280,790.4" sap2010:WorkflowViewState.IdRef="If_3">
+                  <If Condition="[row(&quot;RecordToShow&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="1280,800" sap2010:WorkflowViewState.IdRef="If_3">
                     <If.Then>
                       <Sequence sap:VirtualizedContainerService.HintSize="375.2,640.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
                         <sap:WorkflowViewStateService.ViewState>
@@ -308,9 +310,9 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <If Condition="[row(&quot;HitsOnly&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="1280,1527.2" sap2010:WorkflowViewState.IdRef="If_4">
+                  <If Condition="[row(&quot;HitsOnly&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="1280,1556" sap2010:WorkflowViewState.IdRef="If_4">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="836,1377.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                      <Sequence sap:VirtualizedContainerService.HintSize="836,1396.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -329,7 +331,7 @@
                           </ui:Check.Target>
                         </ui:Check>
                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="794.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;Checked  for the Hits only&quot;]" />
-                        <If Condition="[row(&quot;ClickOnAllHot_ListSoucres&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="794.4,482.4" sap2010:WorkflowViewState.IdRef="If_5">
+                        <If Condition="[row(&quot;ClickOnAllHot_ListSoucres&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="794.4,492" sap2010:WorkflowViewState.IdRef="If_5">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
                               <sap:WorkflowViewStateService.ViewState>
@@ -395,7 +397,7 @@
                             </Sequence>
                           </If.Else>
                         </If>
-                        <If Condition="[row(&quot;ClickOnAllAlertType&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="794.4,482.4" sap2010:WorkflowViewState.IdRef="If_6">
+                        <If Condition="[row(&quot;ClickOnAllAlertType&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="794.4,492" sap2010:WorkflowViewState.IdRef="If_6">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="375.2,332.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
                               <sap:WorkflowViewStateService.ViewState>
@@ -486,9 +488,9 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <If Condition="[row(&quot;ClickAction&quot;).ToString.Equals(&quot;Advanced&quot;)]" sap:VirtualizedContainerService.HintSize="1280,1872.8" sap2010:WorkflowViewState.IdRef="If_8">
+                  <If Condition="[row(&quot;ClickAction&quot;).ToString.Equals(&quot;Advanced&quot;)]" sap:VirtualizedContainerService.HintSize="1280,1892" sap2010:WorkflowViewState.IdRef="If_8">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="860.8,1723.2" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                      <Sequence sap:VirtualizedContainerService.HintSize="860.8,1732.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -517,7 +519,7 @@
                           </ui:Click.Target>
                         </ui:Click>
                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="819.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_21" Level="Info" Message="[&quot;Click  on the Advanced&quot;]" />
-                        <If Condition="[row(&quot;Tab&quot;).ToString.Equals(&quot;Report&quot;)]" sap:VirtualizedContainerService.HintSize="819.2,1350.4" sap2010:WorkflowViewState.IdRef="If_7">
+                        <If Condition="[row(&quot;Tab&quot;).ToString.Equals(&quot;Report&quot;)]" sap:VirtualizedContainerService.HintSize="819.2,1360" sap2010:WorkflowViewState.IdRef="If_7">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="375.2,612.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
                               <Sequence.Variables>
@@ -540,7 +542,7 @@
                                   </ui:CursorPosition>
                                 </ui:Click.CursorPosition>
                                 <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ccbbb6b1-82db-4d6d-8a0f-d94425554ac6" InformativeScreenshot="c4e91eb27b5a646ede1a3d49ac4f0790" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='10891' /&gt;&lt;ctrl name='Report' role='page tab' /&gt;">
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ccbbb6b1-82db-4d6d-8a0f-d94425554ac6" InformativeScreenshot="09110b0bb30ecb3edc0502f1394e2803" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       Uat_Demo_User2' /&gt;&lt;wnd ctrlid='10891' /&gt;&lt;ctrl name='Report' role='page tab' /&gt;">
                                     <ui:Target.TimeoutMS>
                                       <InArgument x:TypeArguments="x:Int32" />
                                     </ui:Target.TimeoutMS>
@@ -563,7 +565,7 @@
                                   </ui:CursorPosition>
                                 </ui:Click.CursorPosition>
                                 <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4ab9b5dc-b5ea-463f-b684-191518a67cad" InformativeScreenshot="1e6fe71a5139e6bb93e5f4ce16be4bc9" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='11120' title='{{variable1}}' /&gt;">
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4ab9b5dc-b5ea-463f-b684-191518a67cad" InformativeScreenshot="4cc5063140e9421d945ed0c1034f186c" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       Uat_Demo_User2' /&gt;&lt;wnd ctrlid='11120' title='Detection' /&gt;">
                                     <ui:Target.TimeoutMS>
                                       <InArgument x:TypeArguments="x:Int32" />
                                     </ui:Target.TimeoutMS>
@@ -598,7 +600,7 @@
                                   </ui:CursorPosition>
                                 </ui:Click.CursorPosition>
                                 <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="06db69fd-2918-43be-8418-255c8c0feb58" InformativeScreenshot="3579223e78e5014e87a41587b5dcd521" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='10891' /&gt;&lt;ctrl name='LPR Data' role='page tab' /&gt;">
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="06db69fd-2918-43be-8418-255c8c0feb58" InformativeScreenshot="8e947adbad3cc40e13b6a08c75014842" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       Uat_Demo_User2' /&gt;&lt;wnd ctrlid='10891' /&gt;&lt;ctrl name='LPR Data' role='page tab' /&gt;">
                                     <ui:Target.TimeoutMS>
                                       <InArgument x:TypeArguments="x:Int32" />
                                     </ui:Target.TimeoutMS>
@@ -621,7 +623,7 @@
                                   </ui:CursorPosition>
                                 </ui:Click.CursorPosition>
                                 <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="64cfa528-60ab-46fb-bfcc-5536e21dad5b" InformativeScreenshot="4ccf3a8cce4f68637da893e9e3dd5dd0" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd omit:ctrlid='11120' title='{{variable2}}' /&gt;">
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="64cfa528-60ab-46fb-bfcc-5536e21dad5b" InformativeScreenshot="404dfc12126324f71eec238dabb61703" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       Uat_Demo_User2' /&gt;&lt;wnd ctrlid='11120' title='Detection' /&gt;">
                                     <ui:Target.TimeoutMS>
                                       <InArgument x:TypeArguments="x:Int32" />
                                     </ui:Target.TimeoutMS>
@@ -639,7 +641,7 @@
                                   </scg:List>
                                 </ui:SelectItem.Items>
                                 <ui:SelectItem.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="55a9c092-232f-4841-820f-e2c253231407" InformativeScreenshot="e3634f309ac0114b2687181dd216e7eb" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='10928' /&gt;&lt;ctrl name='View LPR Data:' role='combo box' /&gt;">
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="55a9c092-232f-4841-820f-e2c253231407" InformativeScreenshot="fe9ca62142a0969a4032684d9da3bd58" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       Uat_Demo_User2' /&gt;&lt;wnd ctrlid='10928' /&gt;&lt;ctrl name='View LPR Data:' role='combo box' /&gt;">
                                     <ui:Target.TimeoutMS>
                                       <InArgument x:TypeArguments="x:Int32" />
                                     </ui:Target.TimeoutMS>
@@ -662,7 +664,7 @@
                                   </ui:CursorPosition>
                                 </ui:Click.CursorPosition>
                                 <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="39c422f3-db3f-4269-bc87-8e5801e7bc33" InformativeScreenshot="208d56a27fbc3effcd15c286eec20640" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='10980' title='Go!' /&gt;">
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="39c422f3-db3f-4269-bc87-8e5801e7bc33" InformativeScreenshot="ade78fe688b95a59df3f88d35d7a70c5" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       Uat_Demo_User2' /&gt;&lt;wnd ctrlid='10980' title='Go!' /&gt;">
                                     <ui:Target.TimeoutMS>
                                       <InArgument x:TypeArguments="x:Int32" />
                                     </ui:Target.TimeoutMS>
@@ -711,7 +713,7 @@
                       </Sequence>
                     </If.Else>
                   </If>
-                  <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="1280,22.4" sap2010:WorkflowViewState.IdRef="EndTest_3" Status="PASSED" />
+                  <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="1280,80.8" sap2010:WorkflowViewState.IdRef="EndTest_3" Status="PASSED" />
                 </Sequence>
               </TryCatch.Try>
               <TryCatch.Catches>

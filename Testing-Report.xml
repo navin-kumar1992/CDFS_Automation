@@ -1,17 +1,584 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Test-Suite name="UiPath Project - Test Automation" total="2" passed="2" failures="0" execution-date="06/17/2020 18:06:20" total-time="00:00:28">
+<Test-Suite name="UiPath Project - Test Automation" total="83" passed="83" failures="0" execution-date="07/09/2020 18:55:21" total-time="00:52:30">
   <Result>
-    <TestScenario>Search</TestScenario>
-    <TestName>Search</TestName>
-    <Started>06/17/2020 18:06:09</Started>
-    <Ended>06/17/2020 18:06:20</Ended>
+    <TestScenario>Login</TestScenario>
+    <TestName>Login</TestName>
+    <Started>07/09/2020 18:54:36</Started>
+    <Ended>07/09/2020 18:55:21</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Smoke_add new camera</TestScenario>
+    <TestName>SmokeTesting</TestName>
+    <Started>07/09/2020 18:55:22</Started>
+    <Ended>07/09/2020 18:55:22</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Smoke_System configuration</TestScenario>
+    <TestName>SmokeTesting</TestName>
+    <Started>07/09/2020 18:55:23</Started>
+    <Ended>07/09/2020 18:55:24</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Smoke_Search detection/hit</TestScenario>
+    <TestName>SmokeTesting</TestName>
+    <Started>07/09/2020 18:55:25</Started>
+    <Ended>07/09/2020 18:55:25</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Add camera</TestScenario>
+    <TestName>AddCamera</TestName>
+    <Started>07/09/2020 18:55:26</Started>
+    <Ended>07/09/2020 18:56:08</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Added camera</TestScenario>
+    <TestName>DSP_AddedCamera</TestName>
+    <Started>07/09/2020 18:56:38</Started>
+    <Ended>07/09/2020 18:57:03</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>Login</TestName>
+    <Started>07/09/2020 19:03:07</Started>
+    <Ended>07/09/2020 19:03:52</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Add camera</TestScenario>
+    <TestName>AddCamera</TestName>
+    <Started>07/09/2020 19:03:53</Started>
+    <Ended>07/09/2020 19:04:13</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Added camera</TestScenario>
+    <TestName>DSP_AddedCamera</TestName>
+    <Started>07/09/2020 19:04:43</Started>
+    <Ended>07/09/2020 19:05:08</Ended>
     <Status>PASSED</Status>
   </Result>
   <Result>
     <TestScenario>System configuraion</TestScenario>
     <TestName>SystemConfiguration</TestName>
-    <Started>06/18/2020 19:19:39</Started>
-    <Ended>06/18/2020 19:19:56</Ended>
+    <Started>07/09/2020 19:05:08</Started>
+    <Ended>07/09/2020 19:05:10</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Search</TestScenario>
+    <TestName>Search</TestName>
+    <Started>07/09/2020 19:05:11</Started>
+    <Ended>07/09/2020 19:05:41</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>Login</TestName>
+    <Started>07/09/2020 19:09:43</Started>
+    <Ended>07/09/2020 19:10:28</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Add camera</TestScenario>
+    <TestName>AddCamera</TestName>
+    <Started>07/09/2020 19:10:28</Started>
+    <Ended>07/09/2020 19:11:09</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Added camera</TestScenario>
+    <TestName>DSP_AddedCamera</TestName>
+    <Started>07/09/2020 19:11:39</Started>
+    <Ended>07/09/2020 19:12:05</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>System configuraion</TestScenario>
+    <TestName>SystemConfiguration</TestName>
+    <Started>07/09/2020 19:12:05</Started>
+    <Ended>07/09/2020 19:12:20</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Search</TestScenario>
+    <TestName>Search</TestName>
+    <Started>07/09/2020 19:13:57</Started>
+    <Ended>07/09/2020 19:14:31</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>Login</TestName>
+    <Started>07/22/2020 11:52:21</Started>
+    <Ended>07/22/2020 11:53:29</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Add camera</TestScenario>
+    <TestName>AddCamera</TestName>
+    <Started>07/22/2020 11:53:30</Started>
+    <Ended>07/22/2020 11:53:51</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Added camera</TestScenario>
+    <TestName>DSP_AddedCamera</TestName>
+    <Started>07/22/2020 11:54:21</Started>
+    <Ended>07/22/2020 11:54:49</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>System configuraion</TestScenario>
+    <TestName>SystemConfiguration</TestName>
+    <Started>07/22/2020 11:54:50</Started>
+    <Ended>07/22/2020 11:55:07</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Search</TestScenario>
+    <TestName>Search</TestName>
+    <Started>07/22/2020 11:56:51</Started>
+    <Ended>07/22/2020 11:57:10</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>Login</TestName>
+    <Started>08/19/2020 17:09:46</Started>
+    <Ended>08/19/2020 17:10:55</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>Login</TestName>
+    <Started>02/08/2021 17:40:52</Started>
+    <Ended>02/08/2021 17:42:04</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>Login</TestName>
+    <Started>02/08/2021 18:27:33</Started>
+    <Ended>02/08/2021 18:28:26</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Add camera</TestScenario>
+    <TestName>AddCamera</TestName>
+    <Started>02/08/2021 18:28:27</Started>
+    <Ended>02/08/2021 18:28:59</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Added camera</TestScenario>
+    <TestName>DSP_AddedCamera</TestName>
+    <Started>02/08/2021 18:29:29</Started>
+    <Ended>02/08/2021 18:30:03</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>System configuraion</TestScenario>
+    <TestName>SystemConfiguration</TestName>
+    <Started>02/08/2021 18:30:03</Started>
+    <Ended>02/08/2021 18:30:19</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Search</TestScenario>
+    <TestName>Search</TestName>
+    <Started>02/08/2021 18:32:02</Started>
+    <Ended>02/08/2021 18:32:33</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>Login</TestName>
+    <Started>02/08/2021 18:42:01</Started>
+    <Ended>02/08/2021 18:42:48</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Add camera</TestScenario>
+    <TestName>AddCamera</TestName>
+    <Started>02/08/2021 18:42:48</Started>
+    <Ended>02/08/2021 18:43:09</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Added camera</TestScenario>
+    <TestName>DSP_AddedCamera</TestName>
+    <Started>02/08/2021 18:43:40</Started>
+    <Ended>02/08/2021 18:44:12</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>System configuraion</TestScenario>
+    <TestName>SystemConfiguration</TestName>
+    <Started>02/08/2021 18:44:12</Started>
+    <Ended>02/08/2021 18:44:28</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Search</TestScenario>
+    <TestName>Search</TestName>
+    <Started>02/08/2021 18:46:11</Started>
+    <Ended>02/08/2021 18:46:42</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>Login</TestName>
+    <Started>02/08/2021 18:50:33</Started>
+    <Ended>02/08/2021 18:51:35</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Add camera</TestScenario>
+    <TestName>AddCamera</TestName>
+    <Started>02/08/2021 18:51:35</Started>
+    <Ended>02/08/2021 18:52:09</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>Login</TestName>
+    <Started>02/08/2021 18:52:58</Started>
+    <Ended>02/08/2021 18:53:48</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Add camera</TestScenario>
+    <TestName>AddCamera</TestName>
+    <Started>02/08/2021 18:53:48</Started>
+    <Ended>02/08/2021 18:54:20</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>Login</TestName>
+    <Started>02/08/2021 18:55:04</Started>
+    <Ended>02/08/2021 18:55:50</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Add camera</TestScenario>
+    <TestName>AddCamera</TestName>
+    <Started>02/08/2021 18:55:50</Started>
+    <Ended>02/08/2021 18:56:11</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Added camera</TestScenario>
+    <TestName>DSP_AddedCamera</TestName>
+    <Started>02/08/2021 18:56:42</Started>
+    <Ended>02/08/2021 18:57:14</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>System configuraion</TestScenario>
+    <TestName>SystemConfiguration</TestName>
+    <Started>02/08/2021 18:57:14</Started>
+    <Ended>02/08/2021 18:57:30</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Search</TestScenario>
+    <TestName>Search</TestName>
+    <Started>02/08/2021 18:59:13</Started>
+    <Ended>02/08/2021 18:59:44</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>Login</TestName>
+    <Started>02/08/2021 19:03:51</Started>
+    <Ended>02/08/2021 19:04:52</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>Login</TestName>
+    <Started>02/08/2021 19:06:47</Started>
+    <Ended>02/08/2021 19:07:33</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Add camera</TestScenario>
+    <TestName>AddCamera</TestName>
+    <Started>02/08/2021 19:07:34</Started>
+    <Ended>02/08/2021 19:07:54</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Added camera</TestScenario>
+    <TestName>DSP_AddedCamera</TestName>
+    <Started>02/08/2021 19:08:25</Started>
+    <Ended>02/08/2021 19:08:57</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>System configuraion</TestScenario>
+    <TestName>SystemConfiguration</TestName>
+    <Started>02/08/2021 19:08:57</Started>
+    <Ended>02/08/2021 19:09:13</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Search</TestScenario>
+    <TestName>Search</TestName>
+    <Started>02/08/2021 19:11:25</Started>
+    <Ended>02/08/2021 19:11:37</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>Login</TestName>
+    <Started>07/06/2021 14:10:48</Started>
+    <Ended>07/06/2021 14:12:16</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>Login</TestName>
+    <Started>07/06/2021 14:32:40</Started>
+    <Ended>07/06/2021 14:34:07</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Add camera</TestScenario>
+    <TestName>AddCamera</TestName>
+    <Started>07/06/2021 14:38:53</Started>
+    <Ended>07/06/2021 14:39:34</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>Login</TestName>
+    <Started>07/12/2021 13:43:06</Started>
+    <Ended>07/12/2021 13:44:15</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>Login</TestName>
+    <Started>07/12/2021 13:45:47</Started>
+    <Ended>07/12/2021 13:47:03</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Add camera</TestScenario>
+    <TestName>AddCamera</TestName>
+    <Started>07/12/2021 14:02:31</Started>
+    <Ended>07/12/2021 14:03:06</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Add camera</TestScenario>
+    <TestName>AddCamera</TestName>
+    <Started>07/12/2021 14:05:50</Started>
+    <Ended>07/12/2021 14:06:42</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>07/13/2021 12:31:36</Started>
+    <Ended>07/13/2021 12:32:53</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Add camera</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>07/13/2021 12:32:54</Started>
+    <Ended>07/13/2021 12:33:29</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>07/13/2021 12:38:49</Started>
+    <Ended>07/13/2021 12:40:06</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Add camera</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>07/13/2021 12:40:06</Started>
+    <Ended>07/13/2021 12:40:58</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>08/02/2021 13:38:24</Started>
+    <Ended>08/02/2021 13:39:00</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>08/02/2021 13:40:36</Started>
+    <Ended>08/02/2021 13:41:53</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>08/03/2021 12:36:36</Started>
+    <Ended>08/03/2021 12:37:54</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Add camera</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>08/03/2021 12:37:55</Started>
+    <Ended>08/03/2021 12:38:47</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Added camera</TestScenario>
+    <TestName>DSP_AddedCamera</TestName>
+    <Started>08/03/2021 13:28:55</Started>
+    <Ended>08/03/2021 13:29:51</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>System configuraion</TestScenario>
+    <TestName>SystemConfiguration</TestName>
+    <Started>08/03/2021 17:59:19</Started>
+    <Ended>08/03/2021 17:59:37</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Search</TestScenario>
+    <TestName>Search</TestName>
+    <Started>08/04/2021 13:56:31</Started>
+    <Ended>08/04/2021 13:56:42</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>ParkingConfiguration</TestScenario>
+    <TestName>ParkingConfiguration</TestName>
+    <Started>08/04/2021 16:20:13</Started>
+    <Ended>08/04/2021 16:20:49</Ended>
+    <Status>Failed</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>08/04/2021 16:30:14</Started>
+    <Ended>08/04/2021 16:31:35</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Add camera</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>08/04/2021 16:31:36</Started>
+    <Ended>08/04/2021 16:31:59</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Added camera</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>08/04/2021 16:32:30</Started>
+    <Ended>08/04/2021 16:32:58</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>System configuraion</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>08/04/2021 16:32:59</Started>
+    <Ended>08/04/2021 16:33:15</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Search</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>08/04/2021 16:34:59</Started>
+    <Ended>08/04/2021 16:35:30</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>08/04/2021 16:50:42</Started>
+    <Ended>08/04/2021 16:52:02</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Add camera</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>08/04/2021 16:52:04</Started>
+    <Ended>08/04/2021 16:52:26</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Added camera</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>08/04/2021 16:52:57</Started>
+    <Ended>08/04/2021 16:53:54</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>System configuraion</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>08/04/2021 16:53:55</Started>
+    <Ended>08/04/2021 16:54:11</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Search</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>08/04/2021 16:55:56</Started>
+    <Ended>08/04/2021 16:56:27</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Login</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>08/04/2021 17:01:58</Started>
+    <Ended>08/04/2021 17:03:19</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Add camera</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>08/04/2021 17:03:20</Started>
+    <Ended>08/04/2021 17:03:43</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Added camera</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>08/04/2021 17:04:14</Started>
+    <Ended>08/04/2021 17:05:11</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>System configuraion</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>08/04/2021 17:05:11</Started>
+    <Ended>08/04/2021 17:05:28</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>Search</TestScenario>
+    <TestName>DynamicActivity</TestName>
+    <Started>08/04/2021 17:07:42</Started>
+    <Ended>08/04/2021 17:07:53</Ended>
+    <Status>PASSED</Status>
+  </Result>
+  <Result>
+    <TestScenario>VideoServer</TestScenario>
+    <TestName>VideoServer</TestName>
+    <Started>08/05/2021 22:08:55</Started>
+    <Ended>08/05/2021 22:09:04</Ended>
     <Status>PASSED</Status>
   </Result>
 </Test-Suite>

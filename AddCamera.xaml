@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="AddCamera" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1480.8,8784" sap2010:WorkflowViewState.IdRef="AddCamera_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="AddCamera" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1480.8,9282.4" sap2010:WorkflowViewState.IdRef="AddCamera_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:t="clr-namespace:TestReportGenerator;assembly=TestReportGenerator" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="23">
+    <scg:List x:TypeArguments="x:String" Capacity="46">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -24,10 +24,11 @@
       <x:String>System.Windows.Markup</x:String>
       <x:String>UiPath.Excel</x:String>
       <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="23">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="46">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -51,9 +52,10 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AddCamera" sap:VirtualizedContainerService.HintSize="1491.2,8619.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AddCamera" sap:VirtualizedContainerService.HintSize="1491.2,9117.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="addCamera" />
     </Sequence.Variables>
@@ -62,10 +64,10 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <t:StartTest TestCase="{x:Null}" DisplayName="Start test" sap:VirtualizedContainerService.HintSize="1449.6,22.4" sap2010:WorkflowViewState.IdRef="StartTest_1" ScenarioName="Add camera" Status="STARTED" />
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1449.6,8464" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <t:StartTest TestCase="{x:Null}" DisplayName="Start test" sap:VirtualizedContainerService.HintSize="1449.6,134.4" sap2010:WorkflowViewState.IdRef="StartTest_1" ScenarioName="Add camera" Status="STARTED" />
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1449.6,8850.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="1412.8,8232.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence sap:VirtualizedContainerService.HintSize="1412.8,8619.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:Boolean" Name="present" />
           </Sequence.Variables>
@@ -86,7 +88,7 @@
               </ui:CursorPosition>
             </ui:Click.CursorPosition>
             <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4ff953a7-caf4-43cb-bc07-b154d006cdb0" InformativeScreenshot="854da685c56dea9e57652534258d66db" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1008' title='Add New Camera' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4ff953a7-caf4-43cb-bc07-b154d006cdb0" InformativeScreenshot="240aedc75b1827c8311725bdef3d5c5b" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       Uat_Demo_User2' /&gt;&lt;wnd ctrlid='1008' title='Add New Camera' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -97,6 +99,19 @@
             </ui:Click.Target>
           </ui:Click>
           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1371.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Click on the add new camera&quot;]" />
+          <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'Button'" sap:VirtualizedContainerService.HintSize="1371.2,107.2" sap2010:WorkflowViewState.IdRef="Check_3">
+            <ui:Check.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9b8d862d-f5ba-4769-a829-d4b250cf101e" InformativeScreenshot="ff2e60710ce715776c351d5503f9020a" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='#32770' title='Open DSP by IP Address' /&gt;&lt;wnd ctrlid='11123' title='IP' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:Check.Target>
+          </ui:Check>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1371.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_26" Level="Info" Message="[&quot;Check for the IP&quot;]" />
           <ui:UiElementExists DisplayName="Element Exists 'Edit'" Exists="[present]" sap:VirtualizedContainerService.HintSize="1371.2,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
             <ui:UiElementExists.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c972cf3a-8455-43ce-a3dc-64caf1888429" InformativeScreenshot="34f7b02de51b29cd165cdbf3e09bdb76" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='#32770' title='Open DSP by IP Address' /&gt;&lt;wnd ctrlid='11271' /&gt;">
@@ -125,27 +140,23 @@
               </InArgument>
             </ui:ReadRange.Range>
           </ui:ReadRange>
-          <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[addCamera]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1371.2,7349.6" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+          <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[addCamera]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1371.2,7456" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1321.6,7200.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1321.6,7307.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[present=True]" sap:VirtualizedContainerService.HintSize="1280,7108" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[present=True]" sap:VirtualizedContainerService.HintSize="1280,7214.4" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="860.8,6958.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <Sequence sap:VirtualizedContainerService.HintSize="860.8,7055.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
                         <Sequence.Variables>
-                          <Variable x:TypeArguments="x:String" Name="verify">
-                            <Variable.Default>
-                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;CameraName&quot;).ToString" />
-                            </Variable.Default>
-                          </Variable>
+                          <Variable x:TypeArguments="x:String" Default="[row(&quot;CameraName&quot;).ToString]" Name="verify" />
                           <Variable x:TypeArguments="x:Boolean" Name="p" />
                         </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
@@ -154,7 +165,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="819.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Add camera verifyd successfully&quot;]" />
-                        <If Condition="[row(&quot;Default&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="819.2,510.4" sap2010:WorkflowViewState.IdRef="If_2">
+                        <If Condition="[row(&quot;Default&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="819.2,520" sap2010:WorkflowViewState.IdRef="If_2">
                           <If.Then>
                             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Info" Message="[&quot;Selected Default value&quot;]" />
                           </If.Then>
@@ -618,7 +629,7 @@
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="819.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_19" Level="Info" Message="[&quot;Enter the camera name as &quot;+row(&quot;CameraManufacture&quot;).ToString]" />
-                        <If Condition="[row(&quot;AddNewGroup&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="819.2,1070.4" sap2010:WorkflowViewState.IdRef="If_5">
+                        <If Condition="[row(&quot;AddNewGroup&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="819.2,1080" sap2010:WorkflowViewState.IdRef="If_5">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="375.2,920.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
                               <sap:WorkflowViewStateService.ViewState>
@@ -727,15 +738,11 @@
                             </ui:Target>
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
-                        <If Condition="[row(&quot;Scheduling&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="819.2,496.8" sap2010:WorkflowViewState.IdRef="If_6">
+                        <If Condition="[row(&quot;Scheduling&quot;).ToString.Equals(&quot;yes&quot;)]" sap:VirtualizedContainerService.HintSize="819.2,506.4" sap2010:WorkflowViewState.IdRef="If_6">
                           <If.Then>
                             <Sequence sap:VirtualizedContainerService.HintSize="375.2,347.2" sap2010:WorkflowViewState.IdRef="Sequence_13">
                               <Sequence.Variables>
-                                <Variable x:TypeArguments="x:String" Name="variable1">
-                                  <Variable.Default>
-                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="row(&quot;Day&quot;).ToString" />
-                                  </Variable.Default>
-                                </Variable>
+                                <Variable x:TypeArguments="x:String" Default="[row(&quot;Day&quot;).ToString]" Name="variable1" />
                               </Sequence.Variables>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -820,7 +827,7 @@
                         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="819.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Click on the Finish button&quot;]" />
                         <ui:UiElementExists DisplayName="Element Exists 'outline item'" Exists="[p]" sap:VirtualizedContainerService.HintSize="819.2,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
                           <ui:UiElementExists.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea8fb811-19de-4d23-b6d8-91a0d6d3acf1" InformativeScreenshot="78606505d53a63cf96c9f13227cfdada" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       CDFAdmin' /&gt;&lt;wnd ctrlid='1007' /&gt;&lt;ctrl name='{{verify}}' role='outline item' /&gt;">
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea8fb811-19de-4d23-b6d8-91a0d6d3acf1" InformativeScreenshot="e97f587414fe2f11bf82ba4c836548af" Selector="&lt;wnd app='dspcontrolcenter.exe' cls='CarDetector_MainFrame' title='Vigilant Fixed LPR                       Uat_Demo_User2' /&gt;&lt;wnd ctrlid='1007' /&gt;&lt;ctrl idx='2' name='Camera Group 01' role='outline item' /&gt;">
                               <ui:Target.TimeoutMS>
                                 <InArgument x:TypeArguments="x:Int32" />
                               </ui:Target.TimeoutMS>
@@ -838,20 +845,20 @@
                             <InArgument x:TypeArguments="x:Boolean">[True]</InArgument>
                           </uta:VerifyExpressionWithOperator.SecondExpression>
                         </uta:VerifyExpressionWithOperator>
-                        <If Condition="[p=True]" sap:VirtualizedContainerService.HintSize="819.2,525.6" sap2010:WorkflowViewState.IdRef="If_4">
+                        <If Condition="[p=True]" sap:VirtualizedContainerService.HintSize="819.2,593.6" sap2010:WorkflowViewState.IdRef="If_4">
                           <If.Then>
-                            <Sequence sap:VirtualizedContainerService.HintSize="375.2,248" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                            <Sequence sap:VirtualizedContainerService.HintSize="375.2,306.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Info" Message="[&quot;Camera added successfully&quot;]" />
-                              <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="EndTest_3" Status="PASSED" />
+                              <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="333.6,80.8" sap2010:WorkflowViewState.IdRef="EndTest_3" Status="PASSED" />
                             </Sequence>
                           </If.Then>
                           <If.Else>
-                            <Sequence sap:VirtualizedContainerService.HintSize="375.2,376" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                            <Sequence sap:VirtualizedContainerService.HintSize="375.2,434.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -860,19 +867,17 @@
                               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_16" Level="Warn" Message="[&quot;Camera not added&quot;]" />
                               <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="TakeScreenShot.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
-                                  <InArgument x:TypeArguments="x:String" x:Key="argument1">
-                                    <Literal x:TypeArguments="x:String">verify add camera</Literal>
-                                  </InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="argument1">verify add camera</InArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
                               </ui:InvokeWorkflowFile>
-                              <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="EndTest_4" Status="FAILED" />
+                              <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="333.6,80.8" sap2010:WorkflowViewState.IdRef="EndTest_4" Status="FAILED" />
                             </Sequence>
                           </If.Else>
                         </If>
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="375.2,376" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <Sequence sap:VirtualizedContainerService.HintSize="375.2,434.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -884,7 +889,7 @@
                             <InArgument x:TypeArguments="x:String" x:Key="argument1">Add camera</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                         </ui:InvokeWorkflowFile>
-                        <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="EndTest_2" Status="FAILED" />
+                        <t:EndTest DisplayName="End test" sap:VirtualizedContainerService.HintSize="333.6,80.8" sap2010:WorkflowViewState.IdRef="EndTest_2" Status="FAILED" />
                       </Sequence>
                     </If.Else>
                   </If>
